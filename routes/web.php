@@ -13,3 +13,7 @@ Route::post('/tasks', [TasksController::class, 'store']);
 Route::patch('/tasks/{id}', [TasksController::class, 'update']);
 
 Route::delete('/tasks/{id}', [TasksController::class, 'delete']);
+
+Route::get('/tasks/completed', [TasksController::class, 'completed']);
+
+Route::get('/tasks/incomplete', [TasksController::class, 'incomplete']);

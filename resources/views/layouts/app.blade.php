@@ -15,9 +15,14 @@
             <a class="nav-link" href="/tasks">All Tasks</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/tasks/incomplete">Incomplete Task</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tasks/completed">Completed Task</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/tasks/create">New Task</a>
           </li>
-          
         </ul>
       </div>
     </nav>

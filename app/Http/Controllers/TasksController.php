@@ -19,6 +19,27 @@ class TasksController extends Controller
         ]);
     }
 
+    public function incomplete(){
+        $incompleteTasks = Task::whereNull('completed_at')
+            ->orderBy('id', 'DESC')
+            ->get();
+
+        return view('tasks.incomplete', [
+            'tasks' => $incompleteTasks,
+        ]);
+    }
+
+    public function completed(){
+        $completedTasks = Task::whereNotNull('completed_at')
+            ->orderBy('completed_at', 'DESC')
+            ->orderBy('id', 'DESC')
+            ->get();
+
+        return view('tasks.completed', [
+            'tasks' => $completedTasks,
+        ]);
+    }
+
     public function create(){
         return view('tasks.create');
     }
